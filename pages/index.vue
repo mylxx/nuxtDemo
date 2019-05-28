@@ -1784,11 +1784,6 @@ export default {
     
   },
   mounted() {
-    let data = {
-      loginCode: "admin",
-      password: "123"
-    };
-
     // this.$axios.post('https://www.easy-mock.com/mock/5caefeabdc560b32b35a74dc/reactLearn/textList').then(res => {
     //   this.list = res.data
     // })

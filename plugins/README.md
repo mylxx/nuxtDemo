@@ -1,7 +1,10 @@
-# PLUGINS
+##nuxt.js demo v2
+#
+# 包含 
+. 网络请求已调通 get 调通后台的 home/bind; post 调通 home/login 
+. 默认布局 和 自定义布局（testLayout）
+. 第三方组件引入
+. 支持scss写法
 
-**This directory is not required, you can delete it if you don't want to use it.**
-
-This directory contains Javascript plugins that you want to run before mounting the root Vue.js application.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/guide/plugins).
+### 待增加其他 公共配置
+. 疑惑 server目录作用和中间件middleware目录作用， 和 ssr之间联系？？？

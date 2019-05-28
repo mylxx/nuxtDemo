@@ -38,8 +38,9 @@ module.exports = {
   */
   plugins: [
     '@/plugins/iview',
-    { src: "~plugins/axios.js", ssr: true },
-    { src: "~/plugins/vue-swiper.js", ssr: false }
+    { src: "~plugins/axios.js", ssr: false },
+    { src: "~/plugins/vue-swiper.js", ssr: false },
+    {src:"~/plugins/seamlessScroll.js", ssr: false}
   ],
 
   /*
@@ -50,9 +51,7 @@ module.exports = {
   ],
   axios: {
     retry: { retries: 3 },
-    //开发模式下开启debug
     debug: process.env._ENV == "production" ? false : true,
-    //设置不同环境的请求地址
     baseURL:
       process.env._ENV == "production"
         ? ""
@@ -60,9 +59,8 @@ module.exports = {
     withCredentials: true,
   },
   proxy: {
-    //开启代理
     "/api/": {
-      target: "http://192.168.19.58:8200",
+      target: "http://172.18.0.123:8120/sys",
       pathRewrite: { "^/api/": "" }
     }
   },
@@ -74,6 +72,7 @@ module.exports = {
     /*
     ** You can extend webpack config here
     */
+   vendor: ['axios'],
     extend(config, ctx) {
     },
     cache: true
